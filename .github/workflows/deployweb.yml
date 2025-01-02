@@ -17,7 +17,7 @@ jobs:
       - name: Install Apache2
         run: 
           sudo yum update -y
-          sudo yum install apache2 -y
+          sudo yum install apache2 && sudo yum install git -y
 #konfigurasi file apache2
       - name: Mv Web Ke /var/www/html 
         run: |
