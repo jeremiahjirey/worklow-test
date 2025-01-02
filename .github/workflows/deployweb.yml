@@ -16,7 +16,7 @@ jobs:
 #install apache2
       - name: Install Apache2
         run: 
-          sudo apt update -y
+          sudo apt update 
           sudo apt install apache2 && sudo apt install git -y
 #konfigurasi file apache2
       - name: Mv Web Ke /var/www/html 
