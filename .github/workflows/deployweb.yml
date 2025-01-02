@@ -16,14 +16,13 @@ jobs:
 #install apache2
       - name: Install Apache2
         run: 
-          sudo yum update -y
-          sudo yum install apache2 -y
-          sudo yum install git -y
+          sudo apt update -y
+          sudo apt install apache2 && sudo apt install git -y
 #konfigurasi file apache2
       - name: Mv Web Ke /var/www/html 
         run: |
+          git clone https://github.com/jeremiahjirey/worklow-test.git .
           cd /var/www/html
-          git clone https://github.com/jeremiahjirey/worklow-test.git 
           sudo rm index.html
           sudo cp -r worklow-test /var/www/html
           sudo chmod -R 777 /var/www/html
