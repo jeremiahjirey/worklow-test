@@ -21,7 +21,6 @@ jobs:
       - name: Mv Web Ke /var/www/html 
         run: |
           cd /var/www/html
-          sudo rm index.html
           git clone https://github.com/jeremiahjirey/worklow-test.git 
           sudo chmod -R 777 /var/www/html
 
