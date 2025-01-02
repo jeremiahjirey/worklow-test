@@ -22,8 +22,8 @@ jobs:
 #konfigurasi file apache2
       - name: Mv Web Ke /var/www/html 
         run: |
-          git clone https://github.com/jeremiahjirey/worklow-test.git .
           cd /var/www/html
+          git clone https://github.com/jeremiahjirey/worklow-test.git 
           sudo rm index.html
           sudo cp -r worklow-test /var/www/html
           sudo chmod -R 777 /var/www/html
