@@ -23,10 +23,10 @@ jobs:
         run: 
           - name: Mv Web Ke /var/www/html
             run: |
-              cd /var/www/html
-              sudo rm index.html
-              sudo cp -r * /var/www/html
-              sudo chmod -R 777 /var/www/html
+            cd /var/www/html
+            sudo rm index.html
+            sudo cp -r * /var/www/html
+            sudo chmod -R 777 /var/www/html
 
 #verify konfigurasi apace2
       - name: Test Apache2
