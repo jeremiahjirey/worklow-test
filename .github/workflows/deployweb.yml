@@ -1,0 +1,35 @@
+name: Deploy Kopikarawang
+on:
+  push:
+    branches: 
+      - "main"
+
+jobs:
+  deploy: 
+    runs-on: App #runners yang sudah didaftarkan
+
+
+    steps:
+#ambil kode dari github
+      - name: ambil kode
+        uses: actions/checkout@v3
+#install apache2
+      - name: Install Apache2
+        run: 
+          sudo apt update && sudo apt install -y apache2 git
+#konfigurasi file apache2
+      - name: Mv Web Ke /var/www/html 
+        run: |
+          sudo chmod -R 777 /var/www/html
+          cd /var/www/html
+          sudo rm index.html
+          git clone https://github.com/jeremiahjirey/worklow-test.git .
+          
+
+          
+#verify konfigurasi apace2
+      - name: Test Apache2
+        run: 
+          sudo systemctl restart apache2
+          
+        
