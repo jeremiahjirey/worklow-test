@@ -17,6 +17,8 @@ jobs:
       - name: Install Apache2
         run: 
           sudo apt update && sudo apt install -y apache2 git
+          sudo systemctl start apache2
+          sudo systemctl enable apache2
 #konfigurasi file apache2
       - name: Mv Web Ke /var/www/html 
         run: |
