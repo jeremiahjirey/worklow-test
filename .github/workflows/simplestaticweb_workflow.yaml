@@ -24,7 +24,6 @@ jobs:
         run: |
           sudo chmod -R 777 /var/www/html
           cd /var/www/html
-          rm index.html
           git clone https://github.com/dihkaw/showipserverwithphp.git .
 
     
