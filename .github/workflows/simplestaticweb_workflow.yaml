@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Install Requirement Package
-        run : |
+        run: |
           sudo yum update && sudo yum install -y httpd php git
           sudo systemctl start httpd
           sudo systemctl enable httpd
