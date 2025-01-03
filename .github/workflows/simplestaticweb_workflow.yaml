@@ -12,14 +12,14 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout/@v3
 
-    steps:
+   
       - name: Install Requirement Package
         run: |
           sudo yum update && sudo yum install -y httpd php git
           sudo systemctl start httpd
           sudo systemctl enable httpd
 
-    steps:
+   
       - name: Configure File 
         run: |
           chmod -R 777 /var/www/html
@@ -27,7 +27,7 @@ jobs:
           rm index.html
           git clone https://github.com/dihkaw/showipserverwithphp.git .
 
-    steps: 
+    
       - name: Check HTTPD
         run: 
           sudo systemctl restart httpd
