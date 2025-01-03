@@ -2,7 +2,7 @@ name: Deploy Simpel Static Web
 on:
   push:
     branches: 
-      - simplestatic
+      - "test"
 
 jobs:
   deploy: 
